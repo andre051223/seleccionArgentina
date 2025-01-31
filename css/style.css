@@ -1,0 +1,345 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  padding: 0 75px 75px 75px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 1em;
+  margin: 5px;
+}
+
+button {
+  background-color: #1a729b;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+h1,h2,h3{
+  background-color: #1a729b;
+  color: #ffffff;
+  width: 100%;
+  font-size: 1.5em;
+  margin: 10px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: black;
+  color: #ffffff;
+  border: 5px solid #1a729b;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+body {
+  background: linear-gradient(45deg, #183c4d, #185568, #183c4d);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  align-items: center;
+}
+
+.palabrasScaloni{
+  width: 100%;
+  margin: 5px;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.torneos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  gap: 25px;
+}
+
+
+.copaAmerica2021,
+.finalissima,
+.mundialQatar2022,
+.copaAmerica2024{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  width: 20%;
+  height: 360px;
+  border: 5px solid cornflowerblue;
+  border-radius: 5%;
+  box-sizing: border-box;
+  float: left;
+}
+
+
+
+.copaAmerica2021 img,
+.finalissima img,
+.mundialQatar2022 img,
+.copaAmerica2024 img{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.fotoPlantilla{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 25px;
+}
+
+.jugadores{
+  display:flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  border: 5px solid cornflowerblue;
+  border-radius: 5%;
+  width: 100%;
+  height: auto;
+}
+
+.delanteros,
+.mediocampistas,
+.defensas,
+.arqueros{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 30px;
+  padding: 10px;
+  width: 20%;
+  height: auto;
+  border: 5px solid cornflowerblue;
+  float: left;
+  gap: 30px;
+}
+
+.delanteros img,
+.mediocampistas img,
+.defensas img,
+.arqueros img {
+  width: 100%;
+}
+
+.cuerpoTecnico{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid cornflowerblue;
+  margin: 15px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.plantillaEntrenadores {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.entrenadores{
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  padding: 10px;
+  width: 100%;
+}
+
+.entrenadores img{
+  width: 300px;
+  height: 300px;
+}
+
+.lionelScaloni,
+.pabloAimar,
+.walterSamuel{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid cornflowerblue;
+  margin: 20px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.estadio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  gap: 15px;
+}
+
+.estadio img {
+  width: 900px;
+  height: 400px;
+}
+
+.momentosIconicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+  width: 100%;
+  height: 1500px;
+}
+
+.momentosIconicos img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  gap: 25px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: black;
+  color: #ffffff;
+  border: 5px solid #1a729b;
+}
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  html {
+    padding: 0 20px 20px 20px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2em;
+    margin: 5px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  html {
+    padding: 0 50px 50px 50px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3em;
+    margin: 8px;
+  }
+
+  button {
+    padding: 9px 18px;
+    font-size: 0.95em;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+  html {
+    padding: 0 75px 75px 75px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

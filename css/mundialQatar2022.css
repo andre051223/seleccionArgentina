@@ -1,0 +1,157 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html{
+padding: 0 75px 75px 75px;
+}
+
+a {
+text-decoration: none;
+color: #ffffff;
+}
+
+p {
+font-family: "Roboto", sans-serif;
+color: #ffffff;
+font-size: 1em;
+margin: 5px;
+}
+
+button {
+background-color: #1a729b;
+color: #ffffff;
+text-align: center;
+border: none;
+padding: 10px 20px;
+margin: 5px;
+cursor: pointer;
+font-size: 1em;
+font-weight: bold;
+border-radius: 5px;
+}
+
+h1,h2,h3{
+background-color: #1a729b;
+color: #ffffff;
+width: 85%;
+font-size: 1.5em;
+margin: 10px;
+text-align: center;
+}
+
+.nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: auto;
+height: 50px;
+padding: 10px 20px;
+background-color: black;
+color: #ffffff;
+border: 5px solid #1a729b;
+}
+
+
+main {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+
+body {
+background: linear-gradient(45deg, #183c4d, #185568, #183c4d);
+font-family: "Roboto", sans-serif;
+text-align: center;
+align-items: center;
+}
+
+.qatar2022{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid cornflowerblue;
+    text-align: center;
+    align-items: center;
+
+}
+
+.tituloQatar2022 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: auto;
+}
+
+.tituloQatar2022 img {
+    width: 100%;
+    height: auto;
+}
+
+.partidosQatar2022 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 75%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.partidosQatar2022 img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 1200px) {
+    .qatar2022 {
+        flex-direction: column;
+    }
+
+    .tituloQatar2022 {
+        width: 100%;
+    }
+
+    .partidosQatar2022 {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .partidosQatar2022 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    .qatar2022 {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .tituloQatar2022 {
+        width: 100%;
+    }
+
+    .partidosQatar2022 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ...existing code... */
+
