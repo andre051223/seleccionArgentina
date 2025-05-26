@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: linear-gradient(45deg, #06064b, #171616, #06064b);
+    color: antiquewhite;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+}
+
+.copaAmerica2024{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3% auto;
+}
+
+.tituloCopaAmerica2024 img{
+    width: 75%;
+    height: auto;
+}
+
+.partidosCopaAmerica2024{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.faseGrupos,
+.faseEliminatoria{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+iframe{
+    width: 600px;
+    height: 250px;
+}
+
+@media (max-width: 1200px) {
+    .copaAmerica2024 {
+        grid-template-columns: 1fr;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .tituloCopaAmerica2024 img {
+        width: 100%;
+    }
+
+    .partidosCopaAmerica2024 {
+        grid-template-columns: 1fr;
+    }
+
+    .faseGrupos,
+    .faseEliminatoria {
+        padding: 5px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .copaAmerica2024 {
+        margin: 5% auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}

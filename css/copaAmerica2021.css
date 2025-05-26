@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  background: linear-gradient(45deg, #06064b, #171616, #06064b);
+  color: antiquewhite;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  
+}
+
+.copaAmerica2021{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  margin: 10px;
+  padding: 10px;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.tituloCopaAmerica2021{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  img{
+    width: 75%;
+    height: auto;
+}
+} 
+
+.partidosCopaAmerica2021{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+iframe{
+  width: 600px;
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .copaAmerica2021 {
+    grid-template-columns: 1fr;
+  }
+
+  .partidosCopaAmerica2021 {
+    grid-template-columns: 1fr;
+  }
+
+  .tituloCopaAmerica2021 img,
+  .partidosCopaAmerica2021 iframe {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 18px;
+  }
+
+  .tituloCopaAmerica2021 {
+    margin: 5px;
+  }
+
+  .copaAmerica2021 {
+    margin: 5px;
+    padding: 5px;
+    gap: 5px;
+  }
+}

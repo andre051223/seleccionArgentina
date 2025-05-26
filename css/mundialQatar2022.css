@@ -1,0 +1,87 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html{
+    background: linear-gradient(45deg, #06064b, #171616, #06064b);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: antiquewhite;
+}
+
+.qatar2022{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloQatar2022 img{
+    width: 75%;
+    height: auto;
+}
+
+.partidosQatar2022{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3% auto;
+    padding: 10px;
+    gap: 30px;
+    text-align: center;
+}
+
+.faseGrupos,
+.faseEliminatoria{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.faseGrupos img,
+.faseEliminatoria img{
+    width: 100%;
+    height: auto;
+}
+
+iframe{
+    width: 600px;
+    height: 250px;
+}
+
+@media (max-width: 1200px) {
+    .qatar2022 {
+        grid-template-columns: 1fr;
+    }
+
+    .partidosQatar2022 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .tituloQatar2022 img {
+        width: 100%;
+    }
+
+    .partidosQatar2022 {
+        margin: 5% auto;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .partidosQatar2022 {
+        padding: 5px;
+    }
+}

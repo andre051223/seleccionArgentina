@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: linear-gradient(45deg, #06064b, #171616, #06064b);
+    color: antiquewhite;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.finalissima{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3% auto;
+    padding: 15px;
+    gap: 15px;
+}
+
+.tituloFinalissima,
+.finalFinalissima{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tituloFinalissima img{
+    width: 70%;
+    height: auto;
+}
+
+.finalFinalissima img{
+    width: 70%;
+    height: 600px;
+}
+
+@media (max-width: 1200px) {
+    .finalissima {
+        grid-template-columns: 1fr;
+    }
+
+    .tituloFinalissima img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .tituloFinalissima img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .finalissima {
+        margin: 10px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .tituloFinalissima img {
+        width: 100%;
+        height: auto;
+    }
+}
