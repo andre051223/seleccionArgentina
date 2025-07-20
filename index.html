@@ -4,11 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Selección Argentina">
-  <meta property="og:type" content="">
+  <meta property="og:title" content="Selección Argentina - La Scaloneta">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <meta property="og:image" content="img/logoArgentinapng.png">
+  <meta property="og:image:alt" content="Logo Selección Argentina">
+  <meta property="og:description" content="Sitio oficial de la Selección Argentina de Fútbol. Conocé los títulos, jugadores, cuerpo técnico y momentos históricos de La Scaloneta.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="selección argentina, messi, scaloni, copa america, mundial qatar, fútbol argentino, afa">
+  <meta name="theme-color" content="#75AADB">
+  <meta name="robots" content="index, follow">
 
   <link rel="icon" href="img/logoArgentinapng.png" sizes="any">
   <link rel="icon" href="img/logoArgentinapng.png" type="image/svg+xml">
@@ -24,29 +30,30 @@
 
 <body>
   <main>
-
-      <section div class="container">
-        <section div class="navbar">
-          <header>
-          <h1>La Scaloneta</h1>
-          <nav>
-            <button><a href="#home">Home</a></button>
-            <button><a href="#torneos">Torneos</a></button>
-            <button><a href="#jugadores">Jugadores</a></button>
-            <button><a href="#cuerpoTecnico">Cuerpo Tecnico</a></button>
-            <button><a href="#estadio">Estadio</a></button>
-            <button><a href="#momentosIconicos">Momentos Iconicos</a></button>
-          </nav>
-          </header>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <section class="nav-container">
+            <section class="nav-brand">
+                <a href="#home"><img src="img/logoArgentinapng.png" alt="Logo Argentina" class="nav-logo"> <span class="nav-title">Selección Argentina</span></a>
+            </section>
+            <ul class="nav-links">
+                <li><a href="#torneos">Titulos</a></li>
+                <li><a href="#jugadores">Jugadores</a></li>
+                <li><a href="#cuerpoTecnico">Cuerpo Técnico</a></li>
+                <li><a href="#estadio">Estadio</a></li>
+                <li><a href="#momentosIconicos">Momentos Icónicos</a></li>
+            </ul>
         </section>
+    </nav>
+
+    <section class="container main-content">
 
 
         <section id="home">
-
-          <section div class="scaloni">
-            <section div class="palabrasScaloni">
+          <section class="scaloni">
+            <section class="palabrasScaloni">
               <p>
-                "Después de clasificar al mundial de Qatar enfrentando a Brasil en San Juan, hablé con Messi porque sentia que lo que venia sería muy dificil, estabamos transmietiendo algo muy grande y la gente y el pueblo argentino está muy ilusionado y la decepción podria ser muy grande, y el me dijo "no importa, seguimos, vamos a intentarlo".
+                "Después de clasificar al mundial de Qatar enfrentando a Brasil en San Juan, hablé con Messi porque sentia que lo que venia sería muy dificil, estabamos transmitiendo algo muy grande y la gente y el pueblo argentino está muy ilusionado y la decepción podria ser muy grande, y el me dijo "no importa, seguimos, vamos a intentarlo".
               </p>
               <br>
               <p>
@@ -58,14 +65,15 @@
               </p>
             </section>
 
-            <section div class="fotoScaloni">
-                <img src="https://a.espncdn.com/photo/2022/1221/r1109379_1296x729_16-9.jpg" alt="" style="opacity: 0.7;">
+            <section class="fotoScaloni">
+                <img src="https://a.espncdn.com/photo/2022/1221/r1109379_1296x729_16-9.jpg" alt="Lionel Scaloni celebrando" style="opacity: 0.7;">
             </section>
           </section>
 
           <section id="torneos">
-            <section div class="titulosArgentina">
-              <section div class="copaAmerica2021">
+            <h2>Titulos de Argentina</h2>
+            <section class="titulosArgentina">
+              <section class="copaAmerica2021">
                 <a href="copaAmerica2021.html">
                   <h2>Copa América 2021</h2>
                   <img src="img/copaAmerica2021.jpg" alt="">
@@ -75,31 +83,31 @@
                 </a>
               </section>
 
-              <section div class="finalissima">
+              <section class="finalissima">
                 <a href="finalissima2022.html">
-                  <h2>Finalissima</h2>
-                  <img src="img/finallissima.jpg" alt="">
-                  <button onclick>
+                  <h2>Finalissima 2022</h2>
+                  <img src="img/finallissima.jpg" alt="Finalissima 2022">
+                  <button>
                     Camino al título
                   </button>
                 </a>
               </section>
 
-              <section div class="mundialQatar2022">
+              <section class="mundialQatar2022">
                 <a href="mundialQatar2022.html">
                   <h2>Mundial Qatar 2022</h2>
-                  <img src="img/qatar2022.jpg" alt="">
-                  <button onclick>
+                  <img src="img/qatar2022.jpg" alt="Mundial Qatar 2022">
+                  <button>
                     Camino al título
                   </button>  
                 </a>
               </section>
 
-              <section div class="copaAmerica2024">
+              <section class="copaAmerica2024">
                 <a href="copaAmerica2024.html">
                   <h2>Copa América 2024</h2>
-                  <img src="img/copaAmerica2024.jpg" alt="">
-                  <button onclick>
+                  <img src="img/copaAmerica2024.jpg" alt="Copa América 2024">
+                  <button>
                     Camino al título
                   </button>  
                 </a>
@@ -107,13 +115,13 @@
             </section>
           </section>
 
-          <section div class="plantilla-argentina">
+          <section class="plantilla-argentina">
             <h2>Jugadores</h2>
-            <img src="https://copaamerica.com/_next/image?url=https%3A%2F%2Fimages.copaamerica.com%2Fargentina_celebra_8149609bb0.jpg&w=3840&q=75" alt="">
+            <img src="https://copaamerica.com/_next/image?url=https%3A%2F%2Fimages.copaamerica.com%2Fargentina_celebra_8149609bb0.jpg&w=3840&q=75" alt="Selección Argentina celebrando">
           </section>
 
           <section id="jugadores">
-            <section div class="jugadores">
+            <section class="jugadores">
               <section>
                 <h2>Delanteros</h2>
 
@@ -204,7 +212,7 @@
               <section>
                 <h2>Arqueros</h2>
                 <img src="https://media.futbolfantasy.com/thumb/400x400/v202408200059/uploads/images/jugadores/ficha-seleccion/3270.png" alt="Emiliano Martínez">
-                <h3>Emiliano "Dibu" Martínez</h3>
+                <h3>Emiliano Martínez</h3>
                 <br>
   
                 <img src="https://media.futbolfantasy.com/thumb/400x400/v202406292139/uploads/images/jugadores/ficha-seleccion/5260.png" alt="Franco Armani">
@@ -219,38 +227,38 @@
 
 
           <section id="cuerpoTecnico">
-            <section div class="plantillaEntrenadores">
+            <section class="plantillaEntrenadores">
               <h2>Cuerpo Técnico</h2>
-              <img src="img/cuerpoTecnico.png" alt="Cuerpo Tecnico">
+              <img src="img/cuerpoTecnico.png" alt="Cuerpo Técnico Selección Argentina">
             </section>
 
-            <section div class="entrenadores">
+            <section class="entrenadores">
 
-              <section div class="lionelScaloni">
-                <h2>Director Técnico - Lionel Scaloni</h2>
+              <section class="lionelScaloni">
+                <h2>Lionel Scaloni</h2>
                 <img src="https://assets.goal.com/images/v3/blt15c1969d7f70942d/GettyImages-1245710722.jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Lionel Scaloni">
               </section>
 
-              <section div class="pabloAimar">
+              <section class="pabloAimar">
                 <h2>Pablo Aimar</h2>
                 <img src="https://ds-images.bolavip.com/news/image?src=https%3A%2F%2Fimages.lapaginamillonaria.com%2Fjpg%2Ffull%2FLPM_20240629_LPM_78730_pablo-aimar-e1719669674101.jpg&width=1200&height=740" alt="Pablo Aimar">
               </section>
 
-              <section div class="walterSamuel">
+              <section class="walterSamuel">
                 <h2>Walter Samuel</h2>
-                <img src="https://statics.somosjujuy.com.ar/2024/06/crop/668145691eb59__400x300.webp"  alt="Walter Samuel">
+                <img src="https://statics.somosjujuy.com.ar/2024/06/crop/668145691eb59__400x300.webp" alt="Walter Samuel">
               </section>
             </section>
           </section>
 
           <section id="estadio">
             <h2>Sede de la selección: Estadio Mas Monumental</h2>
-            <section div class="estadio">
-              <section div class="imagenEstadio">
+            <section class="estadio">
+              <section class="imagenEstadio">
                 <img src="https://static.eldiario.es/clip/81968bf8-93a2-4429-b221-bda93c1e0b44_16-9-discover-aspect-ratio_default_0.jpg" alt="Estadio Mas Monumental">
               </section>
 
-              <section div class="descripciónEstadio">
+              <section class="descripcionEstadio">
                 <p>
                   El Estadio Mas Monumental es el estadio donde juega la Selección Argentina de Fútbol. Es el estadio más grande de Argentina y uno de los más grandes de Sudamérica. Fue inaugurado el 25 de mayo de 1938 y tiene una capacidad para 70.074 espectadores.
                 </p>  
@@ -259,40 +267,37 @@
           </section>
 
           <section id="momentosIconicos">
-            <h2> 
-              Momento Iconico - Recibimiento después de ganar el mundial
-            </h2>
+            <h2>Momentos Icónicos - Recibimiento después de ganar el mundial</h2>
             
-            <section div class="momentosIconicos">
-              <section div class="regreso-qatar">
+            <section class="momentosIconicos">
+              <section class="regreso-qatar">
                 <h3>El regreso a Buenos Aires</h3>
-                <img src="https://www.wfla.com/wp-content/uploads/sites/71/2022/12/GettyImages-1245748508.jpg?w=2560&h=1440&crop=1" alt="">
+                <img src="https://www.wfla.com/wp-content/uploads/sites/71/2022/12/GettyImages-1245748508.jpg?w=2560&h=1440&crop=1" alt="Regreso de la Selección Argentina tras ganar el Mundial">
                 <p>
                   Después de aquel 18 de Diciembre, la selección Argentina regresó a Buenos Aires y fue recibida por miles de hinchas en el Obelisco. La ciudad se vistió de celeste y blanco para festejar el campeonato del mundo.
                 </p>
               </section>
 
-              <section div class="recibimiento-monumental">
+              <section class="recibimiento-monumental">
                 <h3>Recibimiento en el Monumental</h3>
-                <img src="https://www.clarin.com/2023/03/23/uzwRAOOBI_2000x1500__1.jpg" alt="">
+                <img src="https://www.clarin.com/2023/03/23/uzwRAOOBI_2000x1500__1.jpg" alt="Recibimiento en el Estadio Monumental">
                 <p>
-                  El 23 de Marzo de 2023, la Albiceleste se reunió nuevamente en el Monumental para homenajear a los campeones del mundo y por el discurso de Lionel Messi, quien agradeció a los hinchas por el apoyo durante los ultimos años.
+                  El 23 de Marzo de 2023, la Albiceleste se reunió nuevamente en el Monumental para homenajear a los campeones del mundo y por el discurso de Lionel Messi, quien agradeció a los hinchas por el apoyo durante los últimos años.
                 </p>
               </section>
             </section>
-            </section>
-
           </section>
-        </section> 
+
+        </section>
+      </section> 
     </main>
-  <script src="js/app.js"></script>
-</body>
-<br>
-<footer>
-  <section div class="footer">
-    <p>
-      © 2025 Diego Andrés Lopez - Todos los derechos reservados
-    </p>
-  </section>
-</footer>
+    
+    <footer>
+      <section class="footer">
+        <p>© 2025 Diego Andrés Lopez</p>
+      </section>
+    </footer>
+    
+    <script src="js/app.js"></script>
+  </body>
 </html>

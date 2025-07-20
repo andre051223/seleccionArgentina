@@ -4,86 +4,583 @@
     box-sizing: border-box;
 }
 
-html{
-    background: linear-gradient(45deg, #06064b, #171616, #06064b);
-    color: antiquewhite;
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    text-align: center;
+/* ===========================
+   NAVEGACIÓN
+   =========================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 20, 25, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #75AADB;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.copaAmerica2024{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 3% auto;
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.tituloCopaAmerica2024 img{
-    width: 75%;
+.nav-logo {
+    width: 40px;
     height: auto;
 }
 
-.partidosCopaAmerica2024{
+.nav-title {
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-links li a {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    font-weight: 500;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background: rgba(117, 170, 219, 0.2);
+    border-color: #75AADB;
+    color: #FFD700;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   CONTENIDO PRINCIPAL
+   =========================== */
+.main-content {
+    margin-top: 70px; /* Espacio para el navbar fijo */
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #0F1419 0%, #1A1D29 50%, #0F1419 100%);
+    color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f4c75 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.faseGrupos,
-.faseEliminatoria{
+.hero-text {
+    color: #f1f5f9;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    color: #75AADB;
+    margin-bottom: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    line-height: 1.3;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+    color: #e2e8f0;
+}
+
+.hero-info {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tournament-date,
+.tournament-location {
+    background: rgba(117, 170, 219, 0.2);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(117, 170, 219, 0.5);
+    color: #FFD700;
+    font-weight: 600;
+    font-size: 0.95rem;
+    backdrop-filter: blur(10px);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(117, 170, 219, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ===========================
+   SECCIONES DE PARTIDOS
+   =========================== */
+.matches-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #FFD700;
+    margin-bottom: 3rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.phase-section {
+    margin: 4rem 0;
+    background: rgba(26, 29, 41, 0.6);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(117, 170, 219, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.phase-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #75AADB;
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* ===========================
+   CARDS DE PARTIDOS
+   =========================== */
+.match-card {
+    background: rgba(15, 20, 25, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid rgba(117, 170, 219, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
+}
+
+.match-card.knockout {
+    border-color: rgba(255, 215, 0, 0.4);
+    background: rgba(26, 29, 41, 0.9);
+}
+
+.match-card.final {
+    background: linear-gradient(135deg, 
+        rgba(117, 170, 219, 0.1) 0%,
+        rgba(255, 215, 0, 0.1) 100%);
+    border: 2px solid rgba(255, 215, 0, 0.8);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+}
+
+.match-header {
+    margin-bottom: 1.5rem;
+}
+
+.match-title {
+    color: #FFD700;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.match-details {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    gap: 10px;
+    gap: 0.5rem;
+    align-items: center;
 }
 
-iframe{
-    width: 600px;
-    height: 250px;
+.match-date,
+.match-stadium,
+.match-phase {
+    background: rgba(117, 170, 219, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(117, 170, 219, 0.5);
+    color: #f1f5f9;
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: fit-content;
 }
 
-@media (max-width: 1200px) {
-    .copaAmerica2024 {
-        grid-template-columns: 1fr;
-    }
-
-    iframe {
-        width: 100%;
-        height: auto;
-    }
+.match-phase {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.5);
+    color: #FFD700;
+    font-weight: 600;
 }
 
+/* ===========================
+   VIDEOS
+   =========================== */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===========================
+   RESUMEN DE PARTIDOS
+   =========================== */
+.match-summary {
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+
+.match-summary p {
+    margin-bottom: 0.5rem;
+}
+
+.match-summary strong {
+    color: #FFD700;
+}
+
+/* ===========================
+   SECCIÓN FINAL
+   =========================== */
+.final-section {
+    margin: 4rem 0;
+    background: linear-gradient(135deg, 
+        rgba(117, 170, 219, 0.1) 0%,
+        rgba(255, 215, 0, 0.1) 100%);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 215, 0, 0.6);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
+}
+
+.final-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 2.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.final-details {
+    margin-top: 2rem;
+}
+
+.final-goal,
+.final-stats {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+.final-goal h5,
+.final-stats h5 {
+    color: #FFD700;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.final-goal p,
+.final-stats p {
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+
+/* ===========================
+   SECCIÓN CELEBRACIÓN
+   =========================== */
+.celebration-section {
+    margin: 4rem 0;
+    background: rgba(26, 29, 41, 0.8);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.celebration-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #FFD700;
+    margin-bottom: 2.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.celebration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.celebration-card {
+    background: rgba(15, 20, 25, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(117, 170, 219, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.celebration-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.celebration-card h4 {
+    color: #FFD700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.celebration-card p {
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+
+.site-footer {
+    background: rgba(15, 20, 25, 0.95);
+    color: #f8f9fa;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 2px solid #75AADB;
+}
+
+.footer-content p {
+    margin: 0.25rem 0;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
 @media (max-width: 768px) {
-    html {
-        font-size: 16px;
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
     }
-
-    .tituloCopaAmerica2024 img {
-        width: 100%;
+    
+    .nav-links {
+        justify-content: center;
+        gap: 0.5rem;
     }
-
-    .partidosCopaAmerica2024 {
+    
+    .nav-links li a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .main-content {
+        margin-top: 120px;
+    }
+    
+    .hero-section {
+        min-height: 60vh;
+        padding: 1.5rem 0;
+    }
+    
+    .hero-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+        text-align: center;
     }
-
-    .faseGrupos,
-    .faseEliminatoria {
-        padding: 5px;
-        gap: 5px;
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-info {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .phase-section {
+        padding: 2rem 1rem;
+    }
+    
+    .phase-title,
+    .final-title,
+    .celebration-title {
+        font-size: 1.8rem;
+    }
+    
+    .matches-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .match-card {
+        padding: 1.5rem;
+    }
+    
+    .match-title {
+        font-size: 1.2rem;
+    }
+    
+    .celebration-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    html {
-        font-size: 14px;
+    .main-content {
+        margin-top: 140px;
     }
-
-    .copaAmerica2024 {
-        margin: 5% auto;
+    
+    .hero-section {
+        min-height: 50vh;
+        padding: 1rem 0;
     }
-
-    iframe {
-        width: 100%;
-        height: 200px;
+    
+    .hero-content {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    
+    .hero-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .phase-section,
+    .final-section,
+    .celebration-section {
+        padding: 1.5rem 1rem;
+        margin: 2rem 0;
+    }
+    
+    .match-card {
+        padding: 1rem;
+    }
+    
+    .celebration-card {
+        padding: 1.5rem;
+    }
+    
+    .tournament-date,
+    .tournament-location {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
     }
 }

@@ -1,17 +1,23 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
+  "name": "seleccion-argentina-website",
+  "version": "1.0.0",
+  "description": "Sitio web oficial de la Selección Argentina de Fútbol - La Scaloneta",
   "private": true,
   "keywords": [
-    ""
+    "selección argentina",
+    "fútbol",
+    "messi",
+    "scaloni",
+    "mundial",
+    "copa américa"
   ],
-  "license": "",
-  "author": "",
+  "license": "MIT",
+  "author": "Diego Andrés Lopez",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack serve --config webpack.config.dev.js --hot"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
