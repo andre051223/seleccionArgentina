@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+/* Prevenir overflow horizontal */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Contenedor principal responsive */
+.container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /* Mejora de contraste para enlaces y párrafos */
 a, p{
   font-size: 1rem;
@@ -225,6 +238,8 @@ img {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
 }
 
 img:hover {
@@ -245,8 +260,50 @@ footer {
   color: #f8f9fa;
 }
 
-/* Responsive Design mejorado */
-@media (max-width: 768px) {
+/* ===========================
+   RESPONSIVE DESIGN MEJORADO
+   =========================== */
+
+/* Pantallas muy grandes (más de 1400px) */
+@media (min-width: 1401px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .titulosArgentina,
+  .jugadores {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .entrenadores {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+/* Tablets grandes y pantallas medianas (993px - 1200px) */
+@media (max-width: 1200px) {
+  .titulosArgentina {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .jugadores {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .entrenadores {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets y pantallas medianas (768px - 992px) */
+@media (max-width: 992px) {
   /* Navbar responsive */
   .nav-container {
     padding: 0 0.5rem;
@@ -281,20 +338,44 @@ footer {
     margin-top: 60px;
   }
   
-  /* Layout responsive */
+  /* Layout responsive - Tablets */
   .titulosArgentina {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem;
   }
   
-  .jugadores,
-  .entrenadores,
+  .copaAmerica2021, .finalissima, .mundialQatar2022, .copaAmerica2024 {
+    min-height: 180px;
+  }
+  
+  .jugadores {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+  
+  .entrenadores {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+  
+  .lionelScaloni, .pabloAimar, .walterSamuel {
+    min-height: 200px;
+  }
+  
   .momentosIconicos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
   }
 
-  .scaloni,
+  .scaloni {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
   .estadio {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
   }
   
   /* Tipografía responsive */
@@ -308,11 +389,65 @@ footer {
   }
 }
 
+/* Móviles grandes (481px - 768px) */
+@media (max-width: 768px) {
+  /* Layout responsive - Móviles grandes */
+  .titulosArgentina {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.8rem;
+    padding: 15px;
+  }
+  
+  .jugadores {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+  
+  .entrenadores {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 15px;
+  }
+  
+  .momentosIconicos {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    padding: 15px;
+  }
+
+  .scaloni {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    width: 95%;
+  }
+  
+  .estadio {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    width: 95%;
+  }
+  
+  /* Ajustes de imágenes */
+  .jugadores img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .regreso-qatar img,
+  .recibimiento-monumental img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+/* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
   /* Navbar para móviles pequeños */
   .nav-container {
     padding: 0 0.3rem;
     min-height: 45px;
+    flex-wrap: wrap;
   }
   
   .nav-brand {
@@ -328,6 +463,11 @@ footer {
     font-size: 0.7rem;
   }
   
+  .nav-links {
+    gap: 0.2rem;
+    flex-wrap: wrap;
+  }
+  
   .nav-links li a {
     padding: 0.2rem 0.3rem;
     font-size: 0.6rem;
@@ -338,9 +478,150 @@ footer {
     margin-top: 55px;
   }
   
-  /* Tipografía responsive */
+  /* Layout responsive - Móviles pequeños */
+  .titulosArgentina {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 15px;
+  }
+  
+  .jugadores {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 15px;
+  }
+  
+  .entrenadores {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 15px;
+  }
+  
+  .momentosIconicos {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 10px;
+  }
+
+  .scaloni {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .estadio {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  /* Ajustes específicos para móviles pequeños */
+  .copaAmerica2021, .finalissima, .mundialQatar2022, .copaAmerica2024 {
+    min-height: 150px;
+    padding: 0.8rem;
+  }
+  
+  .lionelScaloni, .pabloAimar, .walterSamuel {
+    min-height: 150px;
+    padding: 1rem;
+  }
+  
+  .jugadores img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .scaloni img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .regreso-qatar img,
+  .recibimiento-monumental img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Tipografía más pequeña para móviles */
   html {
     font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.4em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+  }
+  
+  section {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .palabrasScaloni p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  /* Botones más pequeños */
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Móviles extra pequeños (hasta 320px) */
+@media (max-width: 320px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.2rem;
+    min-height: auto;
+  }
+  
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-links li a {
+    font-size: 0.5rem;
+    padding: 0.1rem 0.2rem;
+  }
+  
+  .main-content {
+    margin-top: 70px;
+  }
+  
+  /* Todo en una columna para pantallas muy pequeñas */
+  .titulosArgentina,
+  .jugadores,
+  .entrenadores,
+  .momentosIconicos,
+  .scaloni,
+  .estadio {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem;
+    padding: 10px;
+    margin: 0.5rem;
+  }
+  
+  html {
+    font-size: 14px;
+  }
+  
+  section {
+    margin: 0.2rem;
+    padding: 0.8rem;
   }
 }
 
@@ -366,7 +647,7 @@ footer {
 .titulosArgentina,
 .jugadores{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   margin: 10px;
   padding: 20px;
   gap: 0.8rem;
@@ -438,15 +719,14 @@ footer {
 }
 
 .momentosIconicos{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   text-align: center;
   align-items: center;
   justify-content: center;
   margin: 0% auto;
   padding: 25px;
-  gap: 100px;
-
+  gap: 2rem;
 }
 
 .regreso-qatar,
@@ -455,38 +735,6 @@ footer {
     width: 80%;
     height: 500px;
     border-radius: 10px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .titulosArgentina,
-  .jugadores {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .estadio img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 992px) {
-  .titulosArgentina,
-  .jugadores {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .entrenadores {
-    flex-direction: column;
-  }
-
-  .estadio {
-    flex-direction: column;
-  }
-
-  .estadio img {
-    width: 100%;
-    height: auto;
   }
 }
 
@@ -512,9 +760,10 @@ footer {
 /* Torneos con mejor contraste */
 .titulosArgentina {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   margin: 2rem 0;
+  padding: 1rem;
 }
 
 .copaAmerica2021, .finalissima, .mundialQatar2022, .copaAmerica2024 {
@@ -523,6 +772,18 @@ footer {
   border-radius: 15px;
   padding: 1rem;
   transition: all 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copaAmerica2021 img, .finalissima img, .mundialQatar2022 img, .copaAmerica2024 img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  object-fit: cover;
 }
 
 /* Tamaño específico para h2 en torneos */
@@ -577,44 +838,34 @@ footer {
 }
 
 /* Cuerpo Técnico */
-.entrenadores{
-  display: flex;
-  flex-direction: row;
-  margin: 50px;
-  padding: 10px;
-  width: 90%;
-
-  img{
-    width: 100%;
-    height: auto;
-  }
+.entrenadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1rem;
 }
 
 .lionelScaloni,
 .pabloAimar,
-.walterSamuel{
+.walterSamuel {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
-  padding: 15px;
-  width: 100%;
-  height: auto;
-}
-
-.entrenadores {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.lionelScaloni, .pabloAimar, .walterSamuel {
   background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 20, 25, 0.8));
   border: 2px solid #FFD700;
   border-radius: 12px;
   padding: 1.5rem;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.entrenadores img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
 }
 
 /* Estadio */
@@ -656,23 +907,6 @@ footer {
   line-height: 1.6;
   text-align: left;
   margin-top: 1rem;
-}
-
-@media (max-width: 576px) {
-  .nav {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .entrenadores img {
-    width: 100%;
-    height: auto;
-  }
-
-  .jugadores img {
-    width: 80px;
-    height: 80px;
-  }
 }
 
 /* === ESTILOS PARA PÁGINAS DE TORNEOS === */

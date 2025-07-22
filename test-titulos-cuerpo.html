@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Títulos y Cuerpo Técnico - Selección Argentina</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Indicador visual para debugging */
+        body::before {
+            content: "Desktop";
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            background: rgba(255, 215, 0, 0.8);
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            z-index: 9999;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 1200px) {
+            body::before { content: "Tablet Grande"; }
+        }
+        
+        @media (max-width: 992px) {
+            body::before { content: "Tablet"; }
+        }
+        
+        @media (max-width: 768px) {
+            body::before { content: "Móvil Grande"; }
+        }
+        
+        @media (max-width: 480px) {
+            body::before { content: "Móvil"; }
+        }
+        
+        @media (max-width: 320px) {
+            body::before { content: "Móvil Pequeño"; }
+        }
+        
+        /* Borde rojo para debugging - ayuda a ver los problemas de overflow */
+        .titulosArgentina, .entrenadores {
+            border: 2px solid red;
+        }
+        
+        .copaAmerica2021, .finalissima, .mundialQatar2022, .copaAmerica2024,
+        .lionelScaloni, .pabloAimar, .walterSamuel {
+            border: 1px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Navegación -->
+        <nav class="navbar">
+            <section class="nav-container">
+                <section class="nav-brand">
+                    <a href="#home"><img src="img/logoArgentinapng.png" alt="Logo Argentina" class="nav-logo"> <span class="nav-title">Selección Argentina</span></a>
+                </section>
+                <ul class="nav-links">
+                    <li><a href="#torneos">Títulos</a></li>
+                    <li><a href="#cuerpoTecnico">Cuerpo Técnico</a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <section class="container main-content">
+            <!-- PRUEBA ESPECÍFICA: Sección de Títulos -->
+            <section id="torneos">
+                <h2>Títulos de Argentina</h2>
+                <section class="titulosArgentina">
+                    <section class="copaAmerica2021">
+                        <a href="copaAmerica2021.html">
+                            <h2>Copa América 2021</h2>
+                            <img src="img/copaAmerica2021.jpg" alt="Copa América 2021">
+                            <button>Camino al título</button>
+                        </a>
+                    </section>
+                    <section class="finalissima">
+                        <a href="finalissima2022.html">
+                            <h2>Finalissima 2022</h2>
+                            <img src="img/finallissima.jpg" alt="Finalissima 2022">
+                            <button>Camino al título</button>
+                        </a>
+                    </section>
+                    <section class="mundialQatar2022">
+                        <a href="mundialQatar2022.html">
+                            <h2>Mundial Qatar 2022</h2>
+                            <img src="img/qatar2022.jpg" alt="Mundial Qatar 2022">
+                            <button>Camino al título</button>  
+                        </a>
+                    </section>
+                    <section class="copaAmerica2024">
+                        <a href="copaAmerica2024.html">
+                            <h2>Copa América 2024</h2>
+                            <img src="img/copaAmerica2024.jpg" alt="Copa América 2024">
+                            <button>Camino al título</button>  
+                        </a>
+                    </section>
+                </section>
+            </section>
+
+            <!-- PRUEBA ESPECÍFICA: Cuerpo Técnico -->
+            <section id="cuerpoTecnico">
+                <section class="plantillaEntrenadores">
+                    <h2>Cuerpo Técnico</h2>
+                    <img src="img/cuerpoTecnico.png" alt="Cuerpo Técnico Selección Argentina">
+                </section>
+
+                <section class="entrenadores">
+                    <section class="lionelScaloni">
+                        <h2>Lionel Scaloni</h2>
+                        <img src="https://assets.goal.com/images/v3/blt15c1969d7f70942d/GettyImages-1245710722.jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Lionel Scaloni">
+                    </section>
+
+                    <section class="pabloAimar">
+                        <h2>Pablo Aimar</h2>
+                        <img src="https://ds-images.bolavip.com/news/image?src=https%3A%2F%2Fimages.lapaginamillonaria.com%2Fjpg%2Ffull%2FLPM_20240629_LPM_78730_pablo-aimar-e1719669674101.jpg&width=1200&height=740" alt="Pablo Aimar">
+                    </section>
+
+                    <section class="walterSamuel">
+                        <h2>Walter Samuel</h2>
+                        <img src="https://statics.somosjujuy.com.ar/2024/06/crop/668145691eb59__400x300.webp" alt="Walter Samuel">
+                    </section>
+                </section>
+            </section>
+
+            <!-- Información de debugging -->
+            <section style="margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.8); border-radius: 10px;">
+                <h3 style="color: #FFD700;">Información de Test</h3>
+                <p style="color: white; font-size: 0.9rem;">
+                    • Los bordes rojos muestran los contenedores principales<br>
+                    • Los bordes amarillos muestran los elementos individuales<br>
+                    • Si los elementos se salen del contenedor rojo, hay overflow<br>
+                    • Usa las herramientas de desarrollador (F12) para simular dispositivos móviles
+                </p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

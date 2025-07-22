@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Responsive - Selección Argentina</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Indicador visual para debugging */
+        body::before {
+            content: "Desktop";
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            background: rgba(255, 215, 0, 0.8);
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            z-index: 9999;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 1200px) {
+            body::before { content: "Tablet Grande"; }
+        }
+        
+        @media (max-width: 992px) {
+            body::before { content: "Tablet"; }
+        }
+        
+        @media (max-width: 768px) {
+            body::before { content: "Móvil Grande"; }
+        }
+        
+        @media (max-width: 480px) {
+            body::before { content: "Móvil"; }
+        }
+        
+        @media (max-width: 320px) {
+            body::before { content: "Móvil Pequeño"; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Navegación -->
+        <nav class="navbar">
+            <section class="nav-container">
+                <section class="nav-brand">
+                    <a href="#home"><img src="img/logoArgentinapng.png" alt="Logo Argentina" class="nav-logo"> <span class="nav-title">Selección Argentina</span></a>
+                </section>
+                <ul class="nav-links">
+                    <li><a href="#torneos">Títulos</a></li>
+                    <li><a href="#jugadores">Jugadores</a></li>
+                    <li><a href="#cuerpoTecnico">Cuerpo Técnico</a></li>
+                    <li><a href="#estadio">Estadio</a></li>
+                    <li><a href="#momentosIconicos">Momentos Icónicos</a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <section class="container main-content">
+            <!-- Prueba de Títulos -->
+            <section id="torneos">
+                <h2>Títulos de Argentina</h2>
+                <section class="titulosArgentina">
+                    <section class="copaAmerica2021">
+                        <h2>Copa América 2021</h2>
+                        <img src="img/copaAmerica2021.jpg" alt="Copa América 2021">
+                        <button>Camino al título</button>
+                    </section>
+                    <section class="finalissima">
+                        <h2>Finalissima 2022</h2>
+                        <img src="img/finallissima.jpg" alt="Finalissima 2022">
+                        <button>Camino al título</button>
+                    </section>
+                    <section class="mundialQatar2022">
+                        <h2>Mundial Qatar 2022</h2>
+                        <img src="img/qatar2022.jpg" alt="Mundial Qatar 2022">
+                        <button>Camino al título</button>  
+                    </section>
+                    <section class="copaAmerica2024">
+                        <h2>Copa América 2024</h2>
+                        <img src="img/copaAmerica2024.jpg" alt="Copa América 2024">
+                        <button>Camino al título</button>  
+                    </section>
+                </section>
+            </section>
+
+            <!-- Prueba de Jugadores -->
+            <section id="jugadores">
+                <h2>Jugadores</h2>
+                <section class="jugadores">
+                    <section>
+                        <h2>Delanteros</h2>
+                        <img src="https://media.futbolfantasy.com/thumb/400x400/v202406292139/uploads/images/jugadores/ficha-seleccion/84.png" alt="Lionel Messi">
+                        <h3>Lionel Messi</h3>
+                    </section>
+                    <section>
+                        <h2>Mediocampistas</h2>
+                        <img src="https://media.futbolfantasy.com/thumb/400x400/v202408300241/uploads/images/jugadores/ficha-seleccion/6521.png" alt="Leandro Paredes">
+                        <h3>Leandro Paredes</h3>
+                    </section>
+                    <section>
+                        <h2>Defensas</h2>
+                        <img src="https://media.futbolfantasy.com/thumb/400x400/v202406292139/uploads/images/jugadores/ficha-seleccion/5259.png" alt="Nicolas Tagliafico">
+                        <h3>Nicolas Tagliafico</h3>
+                    </section>
+                    <section>
+                        <h2>Arqueros</h2>
+                        <img src="https://media.futbolfantasy.com/thumb/400x400/v202408200059/uploads/images/jugadores/ficha-seleccion/3270.png" alt="Emiliano Martínez">
+                        <h3>Emiliano Martínez</h3>
+                    </section>
+                </section>
+            </section>
+
+            <!-- Prueba de Momentos Icónicos -->
+            <section id="momentosIconicos">
+                <h2>Momentos Icónicos</h2>
+                <section class="momentosIconicos">
+                    <section class="regreso-qatar">
+                        <h3>El regreso a Buenos Aires</h3>
+                        <img src="https://www.wfla.com/wp-content/uploads/sites/71/2022/12/GettyImages-1245748508.jpg?w=2560&h=1440&crop=1" alt="Regreso de la Selección Argentina">
+                        <p>Después de aquel 18 de Diciembre, la selección Argentina regresó a Buenos Aires y fue recibida por miles de hinchas en el Obelisco.</p>
+                    </section>
+                    <section class="recibimiento-monumental">
+                        <h3>Recibimiento en el Monumental</h3>
+                        <img src="https://www.clarin.com/2023/03/23/uzwRAOOBI_2000x1500__1.jpg" alt="Recibimiento en el Estadio Monumental">
+                        <p>El 23 de Marzo de 2023, la Albiceleste se reunió nuevamente en el Monumental para homenajear a los campeones del mundo.</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
